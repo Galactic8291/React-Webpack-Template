@@ -1,0 +1,24 @@
+{
+  "name": "webpack-template",
+  "version": "1.0.0",
+  "description": "Easy To Use React Template",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheGalacticNinja/React-Webpack-Template.git"
+  },
+  "keywords": [
+    "React",
+    "Webpack",
+    "Template"
+  ],
+  "author": "Robbie McClellan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheGalacticNinja/React-Webpack-Template/issues"
+  },
+  "homepage": "https://github.com/TheGalacticNinja/React-Webpack-Template#readme"
+}
