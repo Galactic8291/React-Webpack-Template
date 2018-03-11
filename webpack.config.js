@@ -1,6 +1,5 @@
 // Webpack Config
 const webpackMerge = require('webpack-merge')
-
 const { ERR_NO_ENV_FLAG } = require('./utils/paths')
 
 // Add addons feature
@@ -12,11 +11,8 @@ module.exports = () => {
     throw new Error(ERR_NO_ENV_FLAG)
   }
 
-  console.log(env)
-
   const envConfig = require(`./utils/builds/${env}.js`)
   const commonConfig = require('./utils/config')
-
   const mergedConfig = webpackMerge(
     commonConfig,
     envConfig
