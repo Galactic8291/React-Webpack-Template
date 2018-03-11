@@ -4,7 +4,9 @@
   "description": "Easy To Use React Template",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --colors",
+    "test:watch": "jest --colors --watch",
+    "test:update": "jest --updateSnapshot",
     "build": "cross-env NODE_ENV=prod webpack -p",
     "dev": "cross-env NODE_ENV=dev webpack-dev-server"
   },
@@ -23,6 +25,12 @@
     "url": "https://github.com/TheGalacticNinja/React-Webpack-Template/issues"
   },
   "homepage": "https://github.com/TheGalacticNinja/React-Webpack-Template#readme",
+  "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>/utils/testSetup.js",
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
+  },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.4",
@@ -34,15 +42,17 @@
     "css-loader": "^0.28.10",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.1",
     "html-webpack-plugin": "^3.0.6",
     "jest": "^22.4.2",
     "jest-cli": "^22.4.2",
     "mini-css-extract-plugin": "^0.2.0",
     "postcss-loader": "^2.1.1",
+    "request": "^2.83.0",
     "style-loader": "^0.20.3",
     "webpack": "^4.1.1",
-    "webpack-cli": "^2.0.10",
-    "webpack-dev-server": "^3.1.0",
+    "webpack-cli": "^2.0.11",
+    "webpack-dev-server": "^3.1.1",
     "webpack-merge": "^4.1.2"
   },
   "dependencies": {
